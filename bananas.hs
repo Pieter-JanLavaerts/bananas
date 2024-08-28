@@ -1,7 +1,6 @@
 ask :: String -> Int -> IO(Int)
 ask var range = do
     putStrLn $ var ++ "? "
-    putStr "> "
     resL <- getLine 
     let res = (read resL :: Int)
     if range /= 0 && res > range
@@ -18,6 +17,8 @@ startGame = putStrLn "Start!"
 
 main :: IO()
 main = do
+    putStrLn "# Bananas"
     askEngine
     askNPlayers
     startGame
+
